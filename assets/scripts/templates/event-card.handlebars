@@ -16,22 +16,10 @@
     </section>
     <section class="card-body">
       <p>
-        {{#if event.start_date === event.end_date}}
-          Date: {{event.start_date}}
-        {{else}}
-          Date: {{event.start_date}} - {{event.end_date}}
-        {{/if}}
+        Date: {{event.start_date}} - {{event.end_date}}
       </p>
       <p>
-        {{#if event.start_time && event.end_time}}
-          Time: {{event.start_time}} - {{event.end_time}}
-        {{else if event.start_time}}
-          Starts at: {{event.start_time}}
-        {{else if event.end_time}}
-          Ends at: {{event.end_time}}
-        {{else}}
-          Time: N/A
-        {{/if}}
+        Time: {{event.start_time}} - {{event.end_time}}
       </p>
       <p>
         {{#if event.location}}
