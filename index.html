@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Event Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8"
+    defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8"
+    defer></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1><span class="header-1">Event</span> <span class="header-2">Planner</span></h1>
+    </div>
+    <div class="nav-buttons">
+      <button class="button">New Event</button>
+      <div id="dropdown-menu" class="dropdown">
+        <button class="button dropdown-toggle" type="button" id="menuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item dropdown-item-dark" id="sign-out-button"
+            href="#">Sign Out</a>
+          <a class="dropdown-item" id="change-password-button" href="#">Change
+            Password</a>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+
 </html>
