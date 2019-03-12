@@ -38,6 +38,16 @@ const changePasswordSuccess = () => {
   $('#change-password-form').trigger('reset')
 }
 
+const signInToggle = () => {
+  $('#sign-up-form').hide()
+  $('#sign-in-form').fadeIn(500)
+}
+
+const signUpToggle = () => {
+  $('#sign-in-form').hide()
+  $('#sign-up-form').fadeIn(500)
+}
+
 const changePasswordError = () => {
   $('#change-pw-feedback').text('Something went wrong')
   $('#change-pw-feedback').show()
@@ -57,5 +67,7 @@ module.exports = {
   signUpSuccess,
   signOutSuccess,
   changePasswordSuccess,
-  changePasswordError
+  changePasswordError,
+  signInToggle,
+  signUpToggle
 }

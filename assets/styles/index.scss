@@ -10,7 +10,8 @@ body {
 }
 
 form > p {
-  color: $dark-green;
+  color: $cream;
+  margin: 0;
   padding: 1rem;
   user-select: none;
 
@@ -86,9 +87,10 @@ header {
 }
 
 .form {
-  background-color: $yellow;
+  background-color: $dark-green;
   margin: 1rem auto;
   max-width: 300px;
+  padding: 1rem;
   position: relative;
   text-align: center;
 }

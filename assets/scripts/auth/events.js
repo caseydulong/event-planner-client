@@ -42,11 +42,16 @@ const onChangePassword = event => {
     .catch(ui.changePasswordError)
 }
 
+const onSignInToggle = () => ui.signInToggle()
+const onSignUpToggle = () => ui.signUpToggle()
+
 const eventHandlers = () => {
   $('#sign-in-form').on('submit', onSignIn)
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-out-button').on('click', onSignOut)
   $('#change-password-form').on('submit', onChangePassword)
+  $('.sign-in-toggle').on('click', onSignInToggle)
+  $('.sign-up-toggle').on('click', onSignUpToggle)
 }
 
 module.exports = {
