@@ -9,12 +9,108 @@ body {
   background-color: $cream;
 }
 
+form > p {
+  color: $dark-green;
+  padding: 1rem;
+  user-select: none;
+
+  > span {
+    &:hover {
+      color: $pink;
+    }
+    &:active {
+      color: $yellow;
+    }
+  }
+}
+
+h1 {
+  color: $dark-green;
+  user-select: none;
+}
+
 header {
   align-items: center;
   background-color: $dark-green;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+}
+
+.button {
+  background-color: $light-green;
+  border: 0;
+  color: $dark-green;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 .5rem;
+  padding: .75rem;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $cream;
+  }
+
+  &:active {
+    background-color: $yellow;
+  }
+}
+
+.feedback-box {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 100%;
+  .user-feedback {
+    align-items: center;
+    color: $dark-green;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: .5rem;
+    user-select: none;
+  }
+  .change-pw-feedback {
+    align-items: center;
+    color: $cream;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: .5rem;
+    user-select: none;
+  }
+}
+
+.form {
+  background-color: orange;
+  margin: 1rem auto;
+  max-width: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.form-button {
+  margin: 0;
+  &:hover {
+    background-color: $pink;
+  }
+  &:active {
+    background-color: $yellow;
+  }
+}
+
+.form-field {
+  background-color: $cream;
+  border: 0;
+  border-radius: 0;
+  color: $dark-green;
+  padding: .5rem;
+  text-align: center;
+
+  &:focus {
+    border: red;
+  }
 }
 
 .header-1 {
@@ -25,52 +121,52 @@ header {
   color: $light-green;
 }
 
+.logo {
+  padding: 1rem;
+}
+
+.modal-button {
+  margin-left: 1rem;
+}
+
+.modal-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-form-field {
+  width: 100%;
+}
+
 .nav-buttons {
   display: flex;
-}
-
-// Bootstrap overrides
-.btn-dark {
-  background-color: $light-green;
-  border: 0;
-  border-radius: 0;
-  color: $dark-green;
-  &:hover {
-    background-color: $cream;
-    color: $dark-green;
-  }
-}
-
-.button {
-  background-color: $light-green;
-  border: 0;
-  color: $dark-green;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 1rem;
   padding: .5rem;
-  text-align: center;
-  text-decoration: none;
-  &:hover {
-    background-color: $cream;
-  }
-  &:active {
-    background-color: $yellow;
-  }
 }
 
 // Bootstrap overrides
+
 .dropdown-menu {
   border-radius: 0;
 }
 
 .dropdown-item {
   color: $dark-green;
+
   &:hover {
     background-color: $light-green;
   }
+
   &:active {
     background-color: $yellow;
     color: $dark-green;
   }
+}
+
+.modal-body {
+  padding-top: 0;
+}
+
+.modal-content {
+  background-color: $dark-green;
+  border-radius: 0;
 }
