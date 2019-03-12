@@ -1,0 +1,19 @@
+{{#each events as |event|}}
+  {{log event}}
+
+  <section class="event">
+    <h2>
+      <small>Title:</small> {{limit event.name 15}}
+    </h2>
+    <p>
+      <!-- <small>Author:</small>
+      {{#if book.author}}
+        {{book.author}}
+      {{else}}
+        No author provided.
+      {{/if}}
+    </p>
+    <button type="button" class="remove-book-button" data-id="{{book.id}}">Remove</button> -->
+  </section>
+
+{{/each}}
