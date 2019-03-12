@@ -1,19 +1,46 @@
 {{#each events as |event|}}
   {{log event}}
 
-  <section class="event">
-    <h2>
-      <small>Title:</small> {{limit event.name 15}}
-    </h2>
-    <p>
-      <!-- <small>Author:</small>
-      {{#if book.author}}
-        {{book.author}}
-      {{else}}
-        No author provided.
-      {{/if}}
-    </p>
-    <button type="button" class="remove-book-button" data-id="{{book.id}}">Remove</button> -->
-  </section>
+  <div class="event-card" data-id="{{event.id}}">
+    <section class="card-header">
+      <h3>{{limit event.name 15}}</h3>
+
+      <!-- Event options -->
+      <div id="dropdown-menu" class="dropup">
+        <button class="button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item">Edit</a>
+          <a class="dropdown-item">Delete</a>
+        </div>
+      </div>
+    </section>
+    <section class="card-body">
+      <p>
+        {{#if event.start_date === event.end_date}}
+          Date: {{event.start_date}}
+        {{else}}
+          Date: {{event.start_date}} - {{event.end_date}}
+        {{/if}}
+      </p>
+      <p>
+        {{#if event.start_time && event.end_time}}
+          Time: {{event.start_time}} - {{event.end_time}}
+        {{else if event.start_time}}
+          Starts at: {{event.start_time}}
+        {{else if event.end_time}}
+          Ends at: {{event.end_time}}
+        {{else}}
+          Time: N/A
+        {{/if}}
+      </p>
+      <p>
+        {{#if event.location}}
+          Location: {{event.location}}
+        {{else}}
+          Location: N/A
+        {{/if}}
+      </p>
+    </section>
+  </div>
 
 {{/each}}

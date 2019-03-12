@@ -27,7 +27,7 @@
     <div class="nav-buttons" style="display: none;">
 
       <!-- New event button -->
-      <button class="button">New Event</button>
+      <button class="button" id="create-event-button">Create Event</button>
 
       <!-- Dropdown menu -->
       <div id="dropdown-menu" class="dropdown">
@@ -36,10 +36,9 @@
           Menu
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item dropdown-item-dark" id="sign-out-button"
-            href="#">Sign Out</a>
-          <a class="dropdown-item" id="change-password-button" href="#"
-            data-toggle="modal" data-target="#changePasswordModal">Change
+          <a class="dropdown-item" id="sign-out-button">Sign Out</a>
+          <a class="dropdown-item" id="change-password-button" data-toggle="modal"
+            data-target="#changePasswordModal">Change
             Password</a>
         </div>
       </div>
@@ -52,6 +51,12 @@
     <div class="feedback-box">
       <p id="user-feedback" class="user-feedback">USER FEEDBACK</p>
     </div>
+
+    <!-- Temporary button -->
+    <button class="button" id="show-events-button">Show Events</button>
+
+    <!-- Display area for event cards -->
+    <section class="content"></section>
 
     <!-- Authentication forms -->
     <section class="form" id="auth-forms">
