@@ -1,6 +1,7 @@
 {{#each events as |event|}}
   {{log event}}
 
+  <!-- Event card -->
   <div class="event-card" data-id="{{event.id}}">
     <section class="card-header">
       <h3>{{limit event.name 15}}</h3>
@@ -19,7 +20,13 @@
         Date: {{event.start_date}} - {{event.end_date}}
       </p>
       <p>
-        Time: {{event.start_time}} - {{event.end_time}}
+        {{#if event.end_time}}
+          Time: {{event.simple_start_time}} - {{event.simple_end_time}}
+        {{else if event.start_time}}
+          Time: {{event.simple_start_time}}
+        {{else}}
+          Time: N/A
+        {{/if}}
       </p>
       <p>
         {{#if event.location}}
