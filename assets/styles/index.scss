@@ -4,6 +4,7 @@ $yellow: #fefe33;
 $pink: #c21460;
 $light-green: #66b032;
 $dark-green: #1b3409;
+$shadow: rgba(0, 0, 0, .2);
 
 body {
   background-color: $cream;
@@ -31,11 +32,19 @@ h1 {
   user-select: none;
 }
 
+h3 {
+  margin: 0 0.5rem;
+}
+
 header {
   align-items: center;
   background-color: $dark-green;
   display: flex;
   justify-content: space-between;
+}
+
+p {
+  margin: 0;
 }
 
 .button {
@@ -44,8 +53,8 @@ header {
   color: $dark-green;
   display: inline-block;
   font-size: 16px;
-  margin: 0 .5rem;
-  padding: .75rem;
+  margin: 0 0.5rem;
+  padding: 0.75rem;
   text-align: center;
   text-decoration: none;
 
@@ -55,6 +64,25 @@ header {
 
   &:active {
     background-color: $yellow;
+  }
+}
+
+.event-card {
+  background-color: $dark-green;
+  margin: 0.25rem;
+  width: 350px;
+
+  .event-card-body {
+    color: $cream;
+    padding: 0.5rem;
+  }
+
+  .event-card-header {
+    align-items: center;
+    background-color: $shadow;
+    color: $light-green;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -71,7 +99,7 @@ header {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: .5rem;
+    padding: 0.5rem;
     user-select: none;
   }
 
@@ -81,7 +109,7 @@ header {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: .5rem;
+    padding: 0.5rem;
     user-select: none;
   }
 }
@@ -112,7 +140,7 @@ header {
   border: 0;
   border-radius: 0;
   color: $dark-green;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
 }
 
@@ -143,10 +171,10 @@ header {
 
 .nav-buttons {
   display: flex;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-
 // Bootstrap overrides
+
 .dropdown-menu {
   border-radius: 0;
 }

@@ -1,41 +1,44 @@
 {{#each events as |event|}}
   {{log event}}
 
-  <!-- Event card -->
-  <div class="event-card" data-id="{{event.id}}">
-    <section class="card-header">
-      <h3>{{limit event.name 15}}</h3>
+  <div class="col-xl-4 col-md-6 col-sm-12" align="center">
 
-      <!-- Event options -->
-      <div id="dropdown-menu" class="dropup">
-        <button class="button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item">Edit</a>
-          <a class="dropdown-item">Delete</a>
+    <!-- Event card -->
+    <div class="event-card" data-id="{{event.id}}">
+      <section class="event-card-header">
+        <h3>{{limit event.name 15}}</h3>
+
+        <!-- Event options -->
+        <div id="dropdown-menu" class="dropup">
+          <button class="button form-button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item">Edit</a>
+            <a class="dropdown-item">Delete</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="card-body">
-      <p>
-        Date: {{event.start_date}} - {{event.end_date}}
-      </p>
-      <p>
-        {{#if event.end_time}}
-          Time: {{event.simple_start_time}} - {{event.simple_end_time}}
-        {{else if event.start_time}}
-          Time: {{event.simple_start_time}}
-        {{else}}
-          Time: N/A
-        {{/if}}
-      </p>
-      <p>
-        {{#if event.location}}
-          Location: {{event.location}}
-        {{else}}
-          Location: N/A
-        {{/if}}
-      </p>
-    </section>
+      </section>
+      <section class="event-card-body" align="left">
+        <p>
+          Date: {{event.start_date}} - {{event.end_date}}
+        </p>
+        <p>
+          {{#if event.end_time}}
+            Time: {{event.simple_start_time}} - {{event.simple_end_time}}
+          {{else if event.start_time}}
+            Time: {{event.simple_start_time}}
+          {{else}}
+            Time: N/A
+          {{/if}}
+        </p>
+        <p>
+          {{#if event.location}}
+            Location: {{event.location}}
+          {{else}}
+            Location: N/A
+          {{/if}}
+        </p>
+      </section>
+    </div>
   </div>
 
 {{/each}}

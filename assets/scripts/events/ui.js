@@ -5,7 +5,7 @@ const eventCardTemplate = require('../templates/event-card.handlebars')
 const indexSuccess = (data) => {
   console.log(data)
   const eventCardsHtml = eventCardTemplate({ events: data.events })
-  $('.content').append(eventCardsHtml)
+  $('#content').append(eventCardsHtml)
 }
 
 const clearEvents = () => {
