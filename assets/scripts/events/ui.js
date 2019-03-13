@@ -20,6 +20,11 @@ const deleteEventSuccess = () => {
   userFeedback('Event deleted')
 }
 
+const updateEventSuccess = id => {
+  $(`#update-event-modal-${id}`).modal('hide')
+  userFeedback('Event updated')
+}
+
 const errorMessage = () => {
   userFeedback('Something went wrong')
   $('#sign-up-form').trigger('reset')
@@ -41,5 +46,6 @@ module.exports = {
   indexSuccess,
   createEventSuccess,
   deleteEventSuccess,
+  updateEventSuccess,
   errorMessage
 }

@@ -12,7 +12,7 @@
         <div id="dropdown-menu" class="dropup">
           <button class="button form-button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id="edit-event-button" data-id="{{event.id}}">Edit</a>
+            <a class="dropdown-item" id="edit-event-button" data-toggle="modal" data-target="#update-event-modal-{{event.id}}">Edit</a>
             <a class="dropdown-item" id="delete-event-button" data-id="{{event.id}}">Delete</a>
           </div>
         </div>
@@ -38,6 +38,43 @@
           {{/if}}
         </p>
       </section>
+    </div>
+  </div>
+
+  <!-- Update event modal -->
+  <div class="modal fade" id="update-event-modal-{{event.id}}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title"><span class="header-1">Update</span>
+            <span class="header-2">Event {{event.id}}</span></h1>
+        </div>
+        <div class="modal-body">
+          <div class="feedback-box">
+            <p id="update-event-feedback" class="user-feedback modal-feedback"></p>
+          </div>
+          <form id="update-event-form" data-id="{{event.id}}">
+            <div class="form-group">
+              <input class="form-field modal-form-field" name="event[name]" placeholder="Title" type="text" required>
+            </div>
+            <div class="form-group">
+              <input class="form-field modal-form-field" name="event[start_date]" placeholder="Start date" type="date" required>
+              <input class="form-field modal-form-field" name="event[end_date]" placeholder="End date" type="date" required>
+            </div>
+            <div class="form-group">
+              <input class="form-field modal-form-field" name="event[start_time]" type="time">
+              <input class="form-field modal-form-field" name="event[end_time]" type="time">
+            </div>
+            <div class="form-group">
+              <input class="form-field modal-form-field" name="event[location]" placeholder="Location" type="text">
+            </div>
+            <div class="modal-button-container">
+              <button type="button" data-dismiss="modal" class="button form-button">Cancel</button>
+              <input type="submit" id="update-event-submit" class="button form-button modal-button" value="Update Event">
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 

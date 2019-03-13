@@ -15,7 +15,6 @@ const onCreateEvent = event => {
   event.preventDefault()
 
   const formData = getFormFields(event.target)
-  console.log(formData)
 
   api.createEvent(formData)
     .then(function () {
@@ -27,7 +26,9 @@ const onCreateEvent = event => {
 
 const onDeleteEvent = event => {
   event.preventDefault()
+
   const id = $(event.target).data('id')
+
   api.deleteEvent(id)
     .then(function () {
       ui.deleteEventSuccess()
@@ -36,9 +37,25 @@ const onDeleteEvent = event => {
     .catch(ui.errorMessage)
 }
 
+const onUpdateEvent = event => {
+  event.preventDefault()
+
+  const id = $(event.target).data('id')
+  console.log(id)
+  const formData = getFormFields(event.target)
+
+  api.updateEvent(id, formData)
+    .then(function () {
+      ui.updateEventSuccess(id)
+      firstIndex()
+    })
+    .catch(ui.errorMessage)
+}
+
 const eventHandlers = () => {
   $('#create-event-form').on('submit', onCreateEvent)
   $('#content').on('click', '#delete-event-button', onDeleteEvent)
+  $('#content').on('submit', '#update-event-form', onUpdateEvent)
 
   // TEMPORARY BUTTON
   $('#show-events-button').on('click', onIndex)
@@ -53,5 +70,6 @@ const firstIndex = () => {
 module.exports = {
   eventHandlers,
   onDeleteEvent,
+  onUpdateEvent,
   firstIndex
 }
