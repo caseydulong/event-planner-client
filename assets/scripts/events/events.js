@@ -18,7 +18,10 @@ const onCreateEvent = event => {
   console.log(formData)
 
   api.createEvent(formData)
-    .then(ui.createEventSuccess)
+    .then(function () {
+      ui.createEventSuccess()
+      firstIndex()
+    })
     .catch(ui.errorMessage)
 }
 

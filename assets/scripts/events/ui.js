@@ -13,7 +13,7 @@ const indexSuccess = data => {
 
 const createEventSuccess = data => {
   userFeedback('Event created')
-  indexSuccess(data)
+  $('#new-event-modal').modal('hide')
 }
 
 const errorMessage = () => {
