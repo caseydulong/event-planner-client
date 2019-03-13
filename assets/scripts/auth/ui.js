@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
+const events = require('../events/events.js')
 
 const errorMessage = () => {
   userFeedback('Something went wrong')
@@ -15,6 +16,7 @@ const signInSuccess = responseData => {
   userFeedback('Sign in successful')
   $('.nav-buttons').fadeIn(500)
   $('#auth-forms').fadeOut(500)
+  events.firstIndex()
 }
 
 const signUpSuccess = () => {
@@ -25,6 +27,7 @@ const signUpSuccess = () => {
 }
 
 const signOutSuccess = () => {
+  $('#content').empty()
   userFeedback('Sign out successful')
   store.user = null
   $('.nav-buttons').fadeOut(500)

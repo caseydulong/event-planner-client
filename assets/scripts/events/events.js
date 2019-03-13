@@ -1,5 +1,6 @@
 'use strict'
 
+const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
@@ -12,18 +13,29 @@ const onIndex = event => {
 
 const onCreateEvent = event => {
   event.preventDefault()
-  api.createEvent()
+
+  const formData = getFormFields(event.target)
+  console.log(formData)
+
+  api.createEvent(formData)
     .then(ui.createEventSuccess)
     .catch(ui.errorMessage)
 }
 
 const eventHandlers = () => {
-  $('#create-event-submit').on('submit', onCreateEvent)
+  $('#create-event-form').on('submit', onCreateEvent)
 
   // TEMPORARY BUTTON
   $('#show-events-button').on('click', onIndex)
 }
 
+const firstIndex = () => {
+  api.index()
+    .then(ui.indexSuccess)
+    .catch(ui.errorMessage)
+}
+
 module.exports = {
-  eventHandlers
+  eventHandlers,
+  firstIndex
 }

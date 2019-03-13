@@ -13,13 +13,14 @@ const index = () => {
   })
 }
 
-const createEvent = () => {
+const createEvent = formData => {
   return $.ajax({
     url: config.apiUrl + '/events',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data: formData
   })
 }
 
