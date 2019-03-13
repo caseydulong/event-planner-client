@@ -25,8 +25,20 @@ const onCreateEvent = event => {
     .catch(ui.errorMessage)
 }
 
+const onDeleteEvent = event => {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  api.deleteEvent(id)
+    .then(function () {
+      ui.deleteEventSuccess()
+      firstIndex()
+    })
+    .catch(ui.errorMessage)
+}
+
 const eventHandlers = () => {
   $('#create-event-form').on('submit', onCreateEvent)
+  $('#content').on('click', '#delete-event-button', onDeleteEvent)
 
   // TEMPORARY BUTTON
   $('#show-events-button').on('click', onIndex)
@@ -40,5 +52,6 @@ const firstIndex = () => {
 
 module.exports = {
   eventHandlers,
+  onDeleteEvent,
   firstIndex
 }

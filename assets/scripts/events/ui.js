@@ -16,6 +16,10 @@ const createEventSuccess = data => {
   $('#new-event-modal').modal('hide')
 }
 
+const deleteEventSuccess = () => {
+  userFeedback('Event deleted')
+}
+
 const errorMessage = () => {
   userFeedback('Something went wrong')
   $('#sign-up-form').trigger('reset')
@@ -36,5 +40,6 @@ const clearEvents = () => {
 module.exports = {
   indexSuccess,
   createEventSuccess,
+  deleteEventSuccess,
   errorMessage
 }
