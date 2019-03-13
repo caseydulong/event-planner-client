@@ -1,15 +1,19 @@
 'use strict'
 
+// Event card handlebars template
 const eventCardTemplate = require('../templates/event-card.handlebars')
 
-const indexSuccess = (data) => {
-  console.log(data)
+const indexSuccess = data => {
+  clearEvents()
+
+  // Create event cards with handlebars
   const eventCardsHtml = eventCardTemplate({ events: data.events })
   $('#content').append(eventCardsHtml)
 }
 
-const clearEvents = () => {
-  $('.content').empty()
+const createEventSuccess = data => {
+  userFeedback('Event created')
+  indexSuccess(data)
 }
 
 const errorMessage = () => {
@@ -25,8 +29,12 @@ const userFeedback = message => {
   setTimeout(() => $('#user-feedback').fadeOut(500), 2500)
 }
 
+const clearEvents = () => {
+  $('#content').empty()
+}
+
 module.exports = {
-  errorMessage,
   indexSuccess,
-  clearEvents
+  createEventSuccess,
+  errorMessage
 }

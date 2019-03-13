@@ -18,7 +18,9 @@ const onCreateEvent = event => {
 }
 
 const eventHandlers = () => {
-  $('#create-events-button').on('click', onCreateEvent)
+  $('#create-event-submit').on('submit', onCreateEvent)
+
+  // TEMPORARY BUTTON
   $('#show-events-button').on('click', onIndex)
 }
 
