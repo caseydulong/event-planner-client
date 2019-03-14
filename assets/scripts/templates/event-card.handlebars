@@ -47,7 +47,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title"><span class="header-1">Update</span>
-            <span class="header-2">Event {{event.id}}</span></h1>
+            <span class="header-2">Event</span></h1>
         </div>
         <div class="modal-body">
           <div class="feedback-box">
@@ -55,17 +55,21 @@
           </div>
           <form class="update-event-form" data-id="{{event.id}}">
             <div class="form-group">
+              <p class="form-field-label">Title:</p>
               <input class="form-field modal-form-field" name="event[name]" placeholder="Title" type="text" value="{{event.name}}" required>
             </div>
             <div class="form-group">
+              <p class="form-field-label">Date:</p>
               <input class="form-field modal-form-field" name="event[start_date]" placeholder="Start date" type="date" value="{{event.start_date}}" required>
               <input class="form-field modal-form-field" name="event[end_date]" placeholder="End date" type="date" value="{{event.end_date}}" required>
             </div>
             <div class="form-group">
+              <p class="form-field-label">Time:</p>
               <input class="form-field modal-form-field" name="event[start_time]" type="time" value="{{event.simple_start_time}}">
               <input class="form-field modal-form-field" name="event[end_time]" type="time" value="{{event.simple_end_time}}">
             </div>
             <div class="form-group">
+              <p class="form-field-label">Location:</p>
               <input class="form-field modal-form-field" name="event[location]" placeholder="Location" type="text" value="{{event.location}}">
             </div>
             <div class="modal-button-container">

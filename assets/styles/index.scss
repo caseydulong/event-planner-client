@@ -70,7 +70,7 @@ p {
 .event-card {
   background-color: $dark-green;
   margin: 0.25rem;
-  width: 350px;
+  max-width: 350px;
 
   .event-card-body {
     color: $cream;
@@ -144,6 +144,11 @@ p {
   text-align: center;
 }
 
+.form-field-label {
+  color: $cream;
+  font-weight: bold;
+}
+
 .header-1 {
   color: $cream;
 }
@@ -174,7 +179,6 @@ p {
   padding: 0.5rem;
 }
 // Bootstrap overrides
-
 .dropdown-menu {
   border-radius: 0;
 }
