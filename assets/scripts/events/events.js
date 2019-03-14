@@ -54,7 +54,7 @@ const onUpdateEvent = event => {
 
 const eventHandlers = () => {
   $('#create-event-form').on('submit', onCreateEvent)
-  $('#content').on('click', '#delete-event-button', onDeleteEvent)
+  $('#content').on('click', '.delete-event-button', onDeleteEvent)
   $('#content').on('submit', '.update-event-form', onUpdateEvent)
 
   // TEMPORARY BUTTON

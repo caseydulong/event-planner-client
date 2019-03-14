@@ -9,11 +9,11 @@
         <h3>{{limit event.name 15}}</h3>
 
         <!-- Event options -->
-        <div id="dropdown-menu" class="dropup">
+        <div class="dropleft">
           <button class="button form-button dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id="edit-event-button" data-toggle="modal" data-target="#update-event-modal-{{event.id}}">Edit</a>
-            <a class="dropdown-item" id="delete-event-button" data-id="{{event.id}}">Delete</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#update-event-modal-{{event.id}}">Edit</a>
+            <a class="dropdown-item delete-event-button" data-id="{{event.id}}">Delete</a>
           </div>
         </div>
       </section>
@@ -32,7 +32,7 @@
         </p>
         <p>
           {{#if event.location}}
-            Location: {{event.location}}
+            Location: {{limit event.location 25}}
           {{else}}
             Location: N/A
           {{/if}}
@@ -51,7 +51,7 @@
         </div>
         <div class="modal-body">
           <div class="feedback-box">
-            <p id="update-event-feedback" class="user-feedback modal-feedback"></p>
+            <p class="user-feedback modal-feedback"></p>
           </div>
           <form class="update-event-form" data-id="{{event.id}}">
             <div class="form-group">

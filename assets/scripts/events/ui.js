@@ -2,6 +2,7 @@
 
 // Event card handlebars template
 const eventCardTemplate = require('../templates/event-card.handlebars')
+const api = require('./api.js')
 
 const indexSuccess = data => {
   clearEvents()
@@ -21,8 +22,9 @@ const deleteEventSuccess = () => {
 }
 
 const updateEventSuccess = id => {
-  $(`#update-event-modal-${id}`).modal('hide')
   userFeedback('Event updated')
+  $(`#update-event-modal-${id}`).modal('hide')
+  $('.modal-backdrop').hide()
 }
 
 const errorMessage = () => {
