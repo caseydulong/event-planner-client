@@ -25,6 +25,7 @@ const updateEventSuccess = id => {
   userFeedback('Event updated')
   $(`#update-event-modal-${id}`).modal('hide')
   $('.modal-backdrop').hide()
+  $('body').removeClass('modal-open')
 }
 
 const errorMessage = () => {
