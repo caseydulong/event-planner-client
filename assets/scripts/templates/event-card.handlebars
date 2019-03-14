@@ -59,13 +59,15 @@
               <input class="form-field modal-form-field" name="event[name]" placeholder="Title" type="text" value="{{event.name}}" required>
             </div>
             <div class="form-group">
-              <p class="form-field-label">Date:</p>
+              <p class="form-field-label">Start date:</p>
               <input class="form-field modal-form-field" name="event[start_date]" placeholder="Start date" type="date" value="{{event.start_date}}" required>
+              <p class="form-field-label">End date:</p>
               <input class="form-field modal-form-field" name="event[end_date]" placeholder="End date" type="date" value="{{event.end_date}}" required>
             </div>
             <div class="form-group">
-              <p class="form-field-label">Time:</p>
+              <p class="form-field-label">Start time:</p>
               <input class="form-field modal-form-field" name="event[start_time]" type="time" value="{{event.simple_start_time}}">
+              <p class="form-field-label">End time:</p>
               <input class="form-field modal-form-field" name="event[end_time]" type="time" value="{{event.simple_end_time}}">
             </div>
             <div class="form-group">
