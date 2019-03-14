@@ -35,10 +35,9 @@ const signOutSuccess = () => {
 }
 
 const changePasswordSuccess = () => {
-  $('#change-pw-feedback').text('Password changed successfully')
-  $('#change-pw-feedback').show()
-  setTimeout(() => $('#change-pw-feedback').fadeOut(500), 5000)
+  userFeedback('Password successfully changed')
   $('#change-password-form').trigger('reset')
+  $('#change-password-modal').modal('hide')
 }
 
 const signInToggle = () => {

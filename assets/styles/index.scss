@@ -97,6 +97,7 @@ p {
     align-items: center;
     color: $dark-green;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin: 0;
     padding: 0.5rem;
@@ -105,8 +106,9 @@ p {
 
   .modal-feedback {
     align-items: center;
-    color: $cream;
+    color: $pink;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin: 0;
     padding: 0.5rem;
