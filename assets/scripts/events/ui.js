@@ -15,6 +15,7 @@ const indexSuccess = data => {
 const createEventSuccess = data => {
   userFeedback('Event created')
   $('#new-event-modal').modal('hide')
+  $('#create-event-form').trigger('reset')
 }
 
 const deleteEventSuccess = () => {
@@ -26,6 +27,7 @@ const updateEventSuccess = id => {
   $(`#update-event-modal-${id}`).modal('hide')
   $('.modal-backdrop').hide()
   $('body').removeClass('modal-open')
+  $(`#update-event-form-${id}`).trigger('reset')
 }
 
 const errorMessage = () => {

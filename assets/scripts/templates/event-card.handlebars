@@ -53,7 +53,7 @@
           <div class="feedback-box">
             <p class="user-feedback modal-feedback"></p>
           </div>
-          <form class="update-event-form" data-id="{{event.id}}">
+          <form class="update-event-form" id="update-event-form-{{event.id}}" data-id="{{event.id}}">
             <div class="form-group">
               <p class="form-field-label">Title:</p>
               <input class="form-field modal-form-field" name="event[name]" placeholder="Title" type="text" value="{{event.name}}" required>
