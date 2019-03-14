@@ -181,6 +181,7 @@ p {
   padding: 0.5rem;
 }
 // Bootstrap overrides
+
 .dropdown-menu {
   border-radius: 0;
 }
@@ -205,4 +206,22 @@ p {
 .modal-content {
   background-color: $dark-green;
   border-radius: 0;
+}
+
+.short-text {
+  display: none;
+}
+// Media queries
+@media (max-width: 540px) {
+  .short-text {
+    display: inline-block;
+  }
+
+  .full-text {
+    display: none;
+  }
+
+  .button {
+    padding: 0.5rem;
+  }
 }
