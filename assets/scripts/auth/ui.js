@@ -13,14 +13,12 @@ const errorMessage = () => {
 const signInSuccess = responseData => {
   store.user = responseData.user
   $('#sign-in-form').trigger('reset')
-  userFeedback('Sign in successful')
   $('.nav-buttons').fadeIn(500)
   $('#auth-forms').fadeOut(500)
   events.firstIndex()
 }
 
 const signUpSuccess = () => {
-  userFeedback('Sign up successful')
   $('#sign-up-form').trigger('reset')
   $('#sign-up-form').hide()
   $('#sign-in-form').fadeIn(500)
