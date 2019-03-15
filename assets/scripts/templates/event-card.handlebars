@@ -6,7 +6,7 @@
     <!-- Event card -->
     <div class="event-card">
       <section class="event-card-header">
-        <h3>{{limit event.name 15}}</h3>
+        <h3>{{limit event.name 25}}</h3>
 
         <!-- Event options -->
         <div class="dropleft">
@@ -19,7 +19,7 @@
       </section>
       <section class="event-card-body" align="left">
         <p>
-          Date: {{event.start_date}} - {{event.end_date}}
+          Date: {{event.format_start_date}} - {{event.format_end_date}}
         </p>
         <p>
           {{#if event.end_time}}
