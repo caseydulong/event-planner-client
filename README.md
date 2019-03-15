@@ -1,8 +1,11 @@
 # Overview
 This project is a front end, single page, event planner application utilizing a [Rails API](https://github.com/caseydulong/event-planner-api), also built by me.  The following technologies were utilized to realize this product:
-- HTML, SCSS, Handlebars
-- JavaScript, jQuery, AJAX
-- Ruby, Rails
+- HTML
+- SCSS
+- Handlebars
+- JavaScript
+- jQuery
+- AJAX
 
 My initial idea was to make a tournament and event scheduler for the New England Super Smash Brothers community.  There is no official website for their organization, and they currently use a combination of a Facebook group and smash.gg for registrations and payment.
 
