@@ -25,6 +25,7 @@ A simple [wireframe](https://i.imgur.com/zxNoSwp.jpg) and set of user stories de
 ## Future Features
 - Clear forms on modal close (no submission).
 - Add confirmation to event deletion.
+- Sort events by time as well as date.
 - More polish for grid layout of event cards.
 - Better formatting for event times.
 - Better input fields for date and time.
