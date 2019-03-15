@@ -23,6 +23,7 @@ A simple [wireframe](https://i.imgur.com/zxNoSwp.jpg) and set of user stories de
 5. As a user I want to be able to delete existing events on my calendar.
 
 ## Future Features
+- Clear forms on modal close (no submission).
 - Add confirmation to event deletion.
 - More polish for grid layout of event cards.
 - Better formatting for event times.
@@ -30,3 +31,5 @@ A simple [wireframe](https://i.imgur.com/zxNoSwp.jpg) and set of user stories de
 - Better formatting or create and update event forms.
 - Add multiple display sections for events (past events, public events, private events).
 - Add search bar to search for your events by name.
+- Add check box for all day time.
+- Add check box for "one day only" events, so user won't need to enter the same date twice.
