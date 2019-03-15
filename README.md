@@ -28,6 +28,5 @@ A simple [wireframe](https://i.imgur.com/zxNoSwp.jpg) and set of user stories de
 - Better formatting for event times.
 - Better input fields for date and time.
 - Better formatting or create and update event forms.
-- Add ability to invite guests to events.
-- Add ability to make public events.  Display public events on a home screen of sorts for all users to see when they log in.
 - Add multiple display sections for events (past events, public events, private events).
+- Add search bar to search for your events by name.
