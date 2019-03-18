@@ -5,6 +5,10 @@ const events = require('../events/events.js')
 
 const errorMessage = () => {
   userFeedback('Something went wrong')
+  clearForms()
+}
+
+const clearForms = () => {
   $('#sign-up-form').trigger('reset')
   $('#sign-in-form').trigger('reset')
   $('#change-password-form').trigger('reset')
@@ -12,14 +16,14 @@ const errorMessage = () => {
 
 const signInSuccess = responseData => {
   store.user = responseData.user
-  $('#sign-in-form').trigger('reset')
+  clearForms()
   $('.nav-buttons').fadeIn(500)
   $('#auth-forms').fadeOut(500)
   events.firstIndex()
 }
 
 const signUpSuccess = () => {
-  $('#sign-up-form').trigger('reset')
+  clearForms()
   $('#sign-up-form').hide()
   $('#sign-in-form').fadeIn(500)
 }
@@ -34,25 +38,27 @@ const signOutSuccess = () => {
 
 const changePasswordSuccess = () => {
   userFeedback('Password successfully changed')
-  $('#change-password-form').trigger('reset')
+  clearForms()
   $('#change-password-modal').modal('hide')
 }
 
 const signInToggle = () => {
   $('#sign-up-form').hide()
   $('#sign-in-form').fadeIn(500)
+  clearForms()
 }
 
 const signUpToggle = () => {
   $('#sign-in-form').hide()
   $('#sign-up-form').fadeIn(500)
+  clearForms()
 }
 
 const changePasswordError = () => {
   $('#change-pw-feedback').text('Something went wrong')
   $('#change-pw-feedback').show()
   setTimeout(() => $('#change-pw-feedback').fadeOut(500), 5000)
-  $('#change-password-form').trigger('reset')
+  clearForms()
 }
 
 const userFeedback = message => {
