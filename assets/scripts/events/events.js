@@ -55,6 +55,7 @@ const eventHandlers = () => {
   $('#create-event-form').on('submit', onCreateEvent)
   $('#content').on('click', '.delete-event-button', onDeleteEvent)
   $('#content').on('submit', '.update-event-form', onUpdateEvent)
+  $('#content').on('hidden.bs.modal', () => $('form').trigger('reset'))
 }
 
 const firstIndex = () => {
