@@ -2,7 +2,6 @@
 
 // Event card handlebars template
 const eventCardTemplate = require('../templates/event-card.handlebars')
-const api = require('./api.js')
 
 const indexSuccess = data => {
   clearEvents()
