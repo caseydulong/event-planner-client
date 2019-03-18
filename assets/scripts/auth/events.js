@@ -57,6 +57,7 @@ const eventHandlers = () => {
   $('#change-password-form').on('submit', onChangePassword)
   $('.sign-in-toggle').on('click', onSignInToggle)
   $('.sign-up-toggle').on('click', onSignUpToggle)
+  $('.modal').on('hidden.bs.modal', () => $('form').trigger('reset'))
 }
 
 module.exports = {
